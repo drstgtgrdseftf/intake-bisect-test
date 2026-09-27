@@ -1,0 +1,26 @@
+name: Request Homework Repository
+description: Get your private homework repo created automatically
+title: "Homework request"
+labels: ["homework-request", "clipslab-security"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for your interest! Fill out this form and a private repository will be created for you automatically within a few minutes.
+
+  - type: input
+    id: github_username
+    attributes:
+      label: Your GitHub username
+      description: "We'll add this account as a collaborator on your private repo."
+      placeholder: "e.g. octocat"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: acknowledgement
+    attributes:
+      label: Acknowledgement
+      options:
+        - label: "I understand this will create a **private** repo in the lmarena org and I'll receive a GitHub collaborator invitation."
+          required: true
